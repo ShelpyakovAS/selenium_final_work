@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 class BasePage:
-    def __init__(self, browser, url, timeout=10):
+    def __init__(self, browser, url, timeout=3):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
@@ -18,8 +18,6 @@ class BasePage:
         return True
 
     def is_correct_url(self):
-        try:
-            self.browser.get(self.url)
-        except:
-            return False
-        return True
+        if self.url == self.browser.current_url:
+            return True
+        return False
