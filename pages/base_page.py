@@ -21,3 +21,9 @@ class BasePage:
         if self.url == self.browser.current_url:
             return True
         return False
+
+    def find_element_on_page(self, how, what):
+        return self.browser.find_element(how, what)
+
+    def find_elements_on_page(self, how, what):
+        return self.browser.find_elements(how, what)
