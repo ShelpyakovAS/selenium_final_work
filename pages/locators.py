@@ -17,4 +17,4 @@ class ProductPageLocators:
     PRODUCT_NAME = (By.CSS_SELECTOR, 'div.product_main h1')
     PRODUCT_PRICE = (By.CSS_SELECTOR, 'p.price_color')
     ADD_BASKET_ALERT_LIST = (By.CSS_SELECTOR, '.alertinner strong')
-    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages div')
